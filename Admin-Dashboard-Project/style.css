@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ----- ROOT VARIABLES -----*/
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #45d147;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-raduis: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   appearance: 0;
+   border: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box; 
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    /* background-color: #677483; */
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.74rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+aside {
+    height: 100vh;
+    /* background-color: #ffbb55; */
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    /* background-color: #dce1eb; */
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.6rem;
+}
+
+aside .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close {
+    display: none;
+}
+
+/* ================== SIDEBAR ================= */
+
+aside .sidebar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 86vh;
+    top: 3rem;
+}
+
+aside .sidebar h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin: 0 0 0 2rem;
+    /* padding: 0 0 0 0.5rem; */
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:nth-child(10) { /* Move Logout to BOTTOM*/
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    margin: 0 0 0 0;
+}
+
+aside .sidebar a.active::before {
+    background-color: var(--color-primary);
+    width: 0.5rem;
+    height: 100%;
+    content: "";
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: 0.5rem;
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 0.5rem;
+}
+
+aside .sidebar a span.message-count {
+    background-color: var(--color-danger);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: var(--border-radius-1);
+    padding: 2px 9px;
+}
+
+/* ======================= MAIN ======================= */
+
+main {
+    margin-top: 1rem;
+    /* background-color: royalblue; */
+}
+
+main .date {
+    display: inline-block;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 1.6rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-light);
+
+}
+
+main .date input[type='date'] {
+    background-color: transparent;
+    color: var(--color-dark);
+}
+
+main .insights {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main .insights  > div {
+    background-color: white;
+    margin-top: 1rem;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-raduis);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .insights > div:hover {
+    box-shadow: none;
+    background-color: #dce1eb;
+}
+
+main .insights > div span {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+main .insights > div.expenses span {
+    background-color: var(--color-danger);
+}
+
+main .insights > div.income span {
+    background-color: var(--color-success);
+}
+
+main .insights > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1rem 0 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    /* background-color: #ff7782; */
+}
+
+main .insights svg {
+    width: 7rem;
+    height: 7rem;
+    /* background-color: #ff7782; */
+}
+
+main .insights svg circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    /* stroke-dasharray: 110;
+    stroke-dashoffset: 92; */
+}
+
+main .insights .sales svg circle {
+    stroke-dashoffset: -50;
+    stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle {
+    stroke-dashoffset: 50;
+    stroke-dasharray: 100;
+}
+
+main .insights .income svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .insights .progress .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ff7782; */
+}
+
+main .insights .progress .number p {
+    font-weight: 600;
+}
+
+
+
