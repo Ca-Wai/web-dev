@@ -58,8 +58,8 @@ body {
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-    /* background-color: #677483; */
+    grid-template-columns: 14rem auto 33rem;
+    background-color: #1659a7;
 }
 
 a {
@@ -214,6 +214,10 @@ aside .sidebar a:hover span {
     margin-left: 0.5rem;
 }
 
+aside .sidebar a:hover span.message-count {
+    margin-left: 0.1rem;
+}
+
 aside .sidebar a span.message-count {
     background-color: var(--color-danger);
     color: white;
@@ -261,7 +265,7 @@ main .insights  > div {
 
 main .insights > div:hover {
     box-shadow: none;
-    background-color: #dce1eb;
+    background-color: #eaecf1;
 }
 
 main .insights > div span {
@@ -346,5 +350,64 @@ main .insights .progress .number p {
     font-weight: 600;
 }
 
+main .insights small {
+    margin-top: 1.5rem;
+    display: block;
+}
 
+/* ======================= MAIN > Order Table ======================= */
 
+main .recent-orders {
+    margin-top: 1.5rem;
+    /* background-color: #363949; */
+}
+
+main .recent-orders h2 {
+    margin-bottom: 1rem;
+    /* background-color: #dce1eb; */
+}
+
+main .recent-orders table {
+    background-color: white;
+    width: 100%;
+    border-radius: var(--card-border-raduis);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+main .recent-orders a {
+    display: block;
+    text-align: center;
+    color: var(--color-dark-variant);
+    margin: 1rem auto;
+    /* background-color: #ff7782; */
+}
+
+/* ============== END OF MAIN ============== */
+
+.right-side {
+    margin-top: 1.4rem;
+}
+
+.right-side .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    background-color: #6783c5;
+}

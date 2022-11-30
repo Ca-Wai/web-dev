@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Admin Dashboard</title>
-    <!-- MATERIAL CDN-->
+    <!--------------- MATERIAL CDN --------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded"
       rel="stylesheet">
 
@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <aside>
-            <!-- START top class -->
+            <!--------------- START top class --------------->
             <div class="top">
                 <div class="logo">
                     <img src="./images/logo.png" alt="EGATOR">
@@ -25,9 +25,9 @@
                     <span class="material-symbols-rounded">close</span>
                 </div>
             </div>
-            <!-- END OF top class -->
+            <!--------------- END OF top class --------------->
             
-            <!-- START sidebar class-->
+            <!--------------- START sidebar class--------------->
             <div class="sidebar">
                 <a href="#">
                     <span class="material-symbols-rounded">team_dashboard</span>
@@ -74,7 +74,7 @@
         </aside>
     
 
-    <!---------------------------- END OF ASIDE ---------------------------->
+        <!---------------------------- END OF ASIDE ---------------------------->
 
         <main>
             <h1>Dashboard</h1>
@@ -143,7 +143,143 @@
                 </div>
                 <!---------------------- END OF INCOME ---------------------->
             </div>
+            <!---------------------- END OF INSIGHTS ---------------------->
+
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Prodcut Name</td>
+                            <td>Product Number</td>
+                            <td>Payment</td>
+                            <td>Status</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>Macbook Pro 15"</td>
+                            <td>M-P-15</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
         </main>
+        <!---------------------- END OF MAIN ---------------------->
+
+        <div class="right-side">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-rounded active">light_mode</span>
+                    <span class="material-symbols-rounded">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>CaWai</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="profile-1_img">
+                    </div>
+                </div>
+            </div>
+            <!-- END OF TOP -->
+
+            <div class="recent-updates">
+                <h2>Recent Activities</h2>
+                <div class="updates">
+                    <div class="activity">
+                        <div class="profile-photo">
+                            <img src="./images/profile-2.jpg" alt="profile-2_img">
+                        </div>
+                        <div class="activity-text">
+                            <p><b>Denki</b> received order of Macbook Pro 15". (Include Gift Box)</p>
+                            <small class="text-muted">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <div class="profile-photo">
+                            <img src="./images/profile-3.jpg" alt="profile-3_img">
+                        </div>
+                        <div class="activity-text">
+                            <p><b>Pochita</b> received order of Macbook Pro 15". (Include Gift Box)</p>
+                            <small class="text-muted">3 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <div class="profile-photo">
+                            <img src="./images/profile-4.jpg" alt="profile-4_img">
+                        </div>
+                        <div class="activity-text">
+                            <p><b>Makima</b> received order of Macbook Pro 15". (Include Gift Box)</p>
+                            <small class="text-muted">4 minutes ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------- END OF RECENT UPDATES ------------------->
+
+            <div class="sales-analytics">
+                <h2>Sales Analytics</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">shopping_cart</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>ONLINE ORDERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>2776</h3>
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>OFFLINE ORDERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="danger">-19%</h5>
+                        <h3>776</h3>
+                    </div>
+                </div>
+                <div class="item customer">
+                    <div class="icon">
+                        <span class="material-symbols-rounded">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>NEW CUSTOMERS</h3>
+                            <small class="text-muted">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+21%</h5>
+                        <h3>822</h3>
+                    </div>
+                </div>
+                <div class="item add-product">
+                    <div>    
+                        <span class="material-symbols-rounded">add</span>
+                        <h3>ADD PRODUCT</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+    <script src="./orders.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
